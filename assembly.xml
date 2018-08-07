@@ -19,17 +19,17 @@
 		<!-- Adds startup scripts to the root directory of zip package. The startup 
 			scripts are copied from the src/main/scripts directory. -->
 		<fileSet>
-			<directory>src/main/scripts</directory>
+			<directory>src/scripts</directory>
 			<outputDirectory></outputDirectory>
 			<includes>
-				<include>*</include>
+				<include>*.sh</include>
 			</includes>
 		</fileSet>
 		<fileSet>
 			<directory>src/main/resources</directory>
 			<outputDirectory></outputDirectory>
 			<includes>
-				<include>sampledb.conf</include>
+				<include>sample.conf</include>
 			</includes>
 		</fileSet>
 	</fileSets>
