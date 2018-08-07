@@ -6,6 +6,7 @@ The meta information about the sample files is stored in JSON document format. B
 
 Next step is the configuration of the fastq-elastic tool. You must set the custom values in the sampledb.conf file.
 
+```
 {
     elastic.host = localhost
     elastic.port = 9200
@@ -22,3 +23,4 @@ Next step is the configuration of the fastq-elastic tool. You must set the custo
 	# List of ignored folders
 	folders.exclusive = []
 }
+```
