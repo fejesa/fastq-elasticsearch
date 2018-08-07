@@ -1,10 +1,19 @@
 # fastq-elasticsearch
 Collects some metadata about FASTQ files and stores them in elasticsearch
 
+Build
+```
+mvn clean install
+```
+generates the bundle that contains all dependencies.
+
+Start
+The fastq-elastic.sh can be used to start the app from a console.
+
 Configuration
 The meta information about the sample files is stored in JSON document format. Before the fastq-elastic tool is started we have to prepare the mapping in the Elasticsearch. The mapping configuration can be found in the git repo (src/main/resources/sampledb-index.json). 
 
-Next step is the configuration of the fastq-elastic tool. You must set the custom values in the sampledb.conf file.
+Next step is the configuration of the fastq-elastic tool. You must set the custom values in the sample.conf file.
 
 ```
 {
@@ -12,16 +21,16 @@ Next step is the configuration of the fastq-elastic tool. You must set the custo
     elastic.port = 9200
 
     # Supported file types
-    file.extensions = [htr, fastq.gz]
+    file.extensions = [fastq.gz]
 
     # List of folders that should be parsed
-	  root.folders = [
-		  /storage/research,
-		  /storage/validation
-	]
-	
-	# List of ignored folders
-	folders.exclusive = []
+    folders.root = [
+        /sample/folder1,
+        /sample/folder2
+    ]
+
+    # List of ignored folders
+    folders.exclusive = []
 }
 ```
 Cheat sheet
