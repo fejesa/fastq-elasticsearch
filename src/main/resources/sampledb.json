@@ -1,0 +1,56 @@
+put sampledb/
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "file": {
+          "properties": {
+            "path": {
+              "type": "keyword"
+            },
+            "creationTime": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss"
+            }
+          }
+        },
+        "sample": {
+          "properties": {
+            "checksum": {
+              "type": "keyword"
+            },
+            "fileLength": {
+              "type": "long"
+            },
+            "samplePath": {
+              "type": "text",
+              "fields": {
+                "exact": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "readCount": {
+              "type": "integer"
+            },
+            "readLength": {
+              "type": "short"
+            },
+            "sampleName": {
+              "type": "text",
+              "fields": {
+                "exact": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "creationTime": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss"
+            }
+          }
+        }
+      }
+    }
+  }
+}
