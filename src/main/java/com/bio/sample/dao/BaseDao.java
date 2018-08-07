@@ -60,7 +60,7 @@ public abstract class BaseDao {
 						new HttpHost("localhost", 9201, "http")));
 	}
 
-	protected String toJson(Object type) throws JsonProcessingException {
+	private String toJson(Object type) throws JsonProcessingException {
 		return objectMapper.writeValueAsString(type);
 	}
 	

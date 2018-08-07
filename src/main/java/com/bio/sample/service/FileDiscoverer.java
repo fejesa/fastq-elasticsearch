@@ -37,9 +37,9 @@ public class FileDiscoverer implements InitializingBean {
 
 	private final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-	private static final String CONF_APPLICATION = "sampledb.conf";
+	private static final String CONF_APPLICATION = "sample.conf";
 	
-	private static final String CONF_ROOT_FOLDERS = "root.folders";
+	private static final String CONF_ROOT_FOLDERS = "folders.root";
 	
 	private static final String CONF_EXCLUSIVE_FOLDERS = "folders.exclusive";
 
